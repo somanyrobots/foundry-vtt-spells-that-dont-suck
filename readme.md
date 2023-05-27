@@ -1,0 +1,1 @@
+This is the official Foundry VTT module for the (Spells That Don't Suck)[C:\Users\Ben\Documents\GitHub\foundry-vtt-spells-that-dont-suck] project, by Omega Ankh and somanyrobots. It also includes a number of spells by KibblesTasty.
