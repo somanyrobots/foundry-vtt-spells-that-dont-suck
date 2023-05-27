@@ -15,8 +15,11 @@
   "authors": [
     {
       "name": "somanyrobots",
+      "url": "https://www.somanyrobots.com",
       "discord": "somanyrobots#9800",
-      "url": "https://www.somanyrobots.com"
+      "patreon": "https://www.patreon.com/somanyrobots",
+      "email": "somanyrobots@somanyrobots.com",
+      "reddit": "https://www.reddit.com/user/somanyrobots",
     }
   ],
   "packs": [
@@ -33,7 +36,7 @@
     "./scripts/init.js"
   ],
   "url": "",
-  "manifest": "https://github.com/somanyrobots/foundry-vtt-spells-that-dont-suck/blob/main/spells-that-dont-suck/module.json",
+  "manifest": "https://raw.githubusercontent.com/somanyrobots/foundry-vtt-spells-that-dont-suck/main/spells-that-dont-suck/module.json",
   "download": "https://github.com/somanyrobots/foundry-vtt-spells-that-dont-suck/releases/download/v3.5a/spells-that-dont-suck-latest.zip",
   "manifestPlusVersion": "1.2.0"
 }
