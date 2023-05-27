@@ -1,0 +1,38 @@
+{
+  "id": "spells-that-dont-suck",
+  "name": "spells-that-dont-suck",
+  "title": "Spells That Don't Suck",
+  "description": "A set of replacements for all of 5E's most problematic spells. Because you don't have to deal with spells that suck.",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "10",
+  "compatibility": {
+    "minimum": "0.8.6",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "author": "somanyrobots",
+  "authors": [
+    {
+      "name": "somanyrobots",
+      "discord": "somanyrobots#9800"
+    }
+  ],
+  "packs": [
+    {
+      "name": "items",
+      "label": "Spells That Don't Suck",
+      "path": "/packs/items.db",
+      "entity": "Item",
+      "type": "Item",
+      "system": "dnd5e"
+    }
+  ],
+  "esmodules": [
+    "./scripts/init.js"
+  ],
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "manifestPlusVersion": "1.2.0"
+}
