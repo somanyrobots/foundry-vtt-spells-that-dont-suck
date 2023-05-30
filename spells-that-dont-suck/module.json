@@ -3,7 +3,7 @@
   "name": "spells-that-dont-suck",
   "title": "Spells That Don't Suck",
   "description": "A set of replacements for all of 5E's most problematic spells. Because you don't have to deal with spells that suck.",
-  "version": "1.0.1",
+  "version": "3.5",
   "compatibility": {
     "minimum": "0.8.6",
     "verified": "10"
