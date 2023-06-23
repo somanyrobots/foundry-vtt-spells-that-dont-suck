@@ -17,3 +17,10 @@ jobs:
         filename: spells-that-dont-suck.zip
         directory: "spells-that-dont-suck"
         type: zip
+        name: Publish
+    - name: Upload zip to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: spells-that-dont-suck.zip
+        asset_name: spells-that-dont-suck.zip
