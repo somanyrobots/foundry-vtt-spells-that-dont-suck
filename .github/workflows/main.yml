@@ -1,26 +1,64 @@
-name: Create release
+name: Module Publish
 
 on:
-  release:
-    types:
-      - created
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Zip Release
-      uses: TheDoctor0/zip-release@0.7.1
-      with:
-        filename: spells-that-dont-suck.zip
-        path: "spells-that-dont-suck/"
-        type: zip
-        name: Publish
-    - name: Upload zip to release
-      uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: spells-that-dont-suck.zip
-        asset_name: spells-that-dont-suck.zip
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      # create a zip file with all files required by the module to add to the release
+      - name: Zip Files
+        working-directory: .
+        run: zip -r spells-that-dont-suck.zip ./spells-that-dont-suck/*
+
+      # Get the version from 'module.json'
+      - name: Get Version
+        shell: bash
+        id: get-version
+        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+
+      # Generate changelog for release body
+      # - name: Changelog
+      #  id: Changelog
+      #  uses: scottbrenner/generate-changelog-action@master
+      #  env:
+      #    REPO: ${{ github.repository }}
+
+      # Create a release for this specific version
+      - name: Create Release
+        id: create_version_release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true # set this to false if you want to prevent updating existing releases
+          name: ${{ steps.get-version.outputs.version }}
+          body: |
+            ${{ steps.Changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './spells-that-dont-suck/module.json,./spells-that-dont-suck.zip'
+          tag_name: ${{ steps.get-version.outputs.version }}
+
+      # Update the 'latest' release
+      #- name: Create Release
+      #  id: create_latest_release
+      #  uses: ncipollo/release-action@v1
+      #  if: endsWith(github.ref, 'master')
+      #  with:
+      #    allowUpdates: true
+      #    name: Latest
+      #    draft: false
+      #    prerelease: false
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+      #    artifacts: './spells-that-dont-suck/module.json,./spells-that-dont-suck.zip'
+      #    tag: latest
