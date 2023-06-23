@@ -15,7 +15,7 @@ jobs:
       uses: TheDoctor0/zip-release@0.7.1
       with:
         filename: spells-that-dont-suck.zip
-        directory: "spells-that-dont-suck"
+        path: "spells-that-dont-suck/"
         type: zip
         name: Publish
     - name: Upload zip to release
