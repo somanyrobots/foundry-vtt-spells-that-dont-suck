@@ -1,0 +1,19 @@
+name: Create release
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@0.7.1
+      with:
+        filename: spells-that-dont-suck.zip
+        directory: "spells-that-dont-suck"
+        type: zip
