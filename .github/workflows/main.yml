@@ -25,7 +25,8 @@ jobs:
       - name: Get Version
         shell: bash
         id: get-version
-        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+        # run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+        run: echo "name=version::$(node ./.github/workflows/get-version.js" >> $GITHUB_OUTPUT
 
       # Generate changelog for release body
       # - name: Changelog
@@ -47,7 +48,7 @@ jobs:
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './spells-that-dont-suck/module.json,./spells-that-dont-suck.zip'
-          tag_name: ${{ steps.get-version.outputs.version }}
+          tag: ${{ steps.get-version.outputs.version }}
 
       # Update the 'latest' release
       #- name: Create Release
