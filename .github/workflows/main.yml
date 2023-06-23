@@ -26,7 +26,7 @@ jobs:
         shell: bash
         id: get-version
         # run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
-        run: echo "name=version::$(node ./.github/workflows/get-version.js" >> $GITHUB_OUTPUT
+        run: echo "name=version::$(node ./.github/workflows/get-version.js)" >> $GITHUB_OUTPUT
 
       # Generate changelog for release body
       # - name: Changelog
