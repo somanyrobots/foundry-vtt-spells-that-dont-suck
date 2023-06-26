@@ -1,0 +1,54 @@
+{
+  "id": "spells-that-dont-suck",
+  "title": "Spells That Don't Suck",
+  "description": "A set of replacements for all of 5E's most problematic spells. Because you don't have to deal with spells that suck.",
+  "version": "#{VERSION}#",
+  "library": "false",
+  "manifestPlusVersion": "1.2.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": 10,
+    "maximum": 11
+  },
+  "authors": [
+    {
+      "name": "somanyrobots",
+      "url": "https://www.somanyrobots.com",
+      "discord": "somanyrobots#9800",
+      "patreon": "https://www.patreon.com/somanyrobots",
+      "email": "somanyrobots@somanyrobots.com",
+      "reddit": "https://www.reddit.com/user/somanyrobots"
+    }
+  ],
+  "relationships": {
+    "systems": [],
+    "requires": []
+  },
+  "esmodules": [
+    "scripts/module.js"
+  ],
+  "scripts": [
+    "scripts/lib/lib.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "media": [
+    {
+      "type": "icon",
+      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
+    }
+  ]
+}
