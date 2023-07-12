@@ -30,9 +30,6 @@
         "system": "dnd5e"
     }
   ],
-  "relationships": {
-    "systems": ["dnd5e"]
-  },
   "esmodules": [
     "scripts/module.js"
   ],
