@@ -6,7 +6,7 @@
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
-    "minimum": 10,
+    "minimum": 10
     "verified": 10,
     "maximum": 11
   },
@@ -20,9 +20,18 @@
       "reddit": "https://www.reddit.com/user/somanyrobots"
     }
   ],
+  "packs": [
+    {
+        "name": "spells-that-dont-suck-items",
+        "label": "Spells That Don't Suck",
+        "path": "./packs/items.db",
+        "entity": "Item",
+        "type": "Item",
+        "system": "dnd5e"
+    }
+  ],
   "relationships": {
-    "systems": [],
-    "requires": []
+    "systems": ["dnd5e"]
   },
   "esmodules": [
     "scripts/module.js"
