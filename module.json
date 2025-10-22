@@ -7,7 +7,7 @@
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 10,
-    "verified": 12
+    "verified": 13
   },
   "authors": [
     {
@@ -21,14 +21,36 @@
   ],
   "packs": [
     {
-        "name": "spells-that-dont-suck-items",
-        "label": "Spells That Don't Suck",
-        "path": "./packs/items.db",
-        "entity": "Item",
-        "type": "Item",
-        "system": "dnd5e"
+      "name": "sds-spells",
+      "label": "Spells That Don't Suck - Spells",
+      "system": "dnd5e",
+      "type": "Item",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "spell"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sds-journals",
+      "label": "Spells That Don't Suck - Spell Lists",
+      "type": "JournalEntry",
+      "system": "dnd5e"
     }
   ],
+  "packFolders": [{
+		"name": "Somanyrobots",
+		"sorting": "a",
+		"color": "#bd8e28",
+		"folders": [{
+			"name": "Spells That Don't Suck",
+			"sorting": "a",
+			"color": "#bd8e28",
+			"packs": ["sds-spells", "sds-journals"]
+		}]
+	}],
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
