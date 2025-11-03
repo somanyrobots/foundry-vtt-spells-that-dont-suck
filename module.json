@@ -17,6 +17,10 @@
       "patreon": "https://www.patreon.com/somanyrobots",
       "email": "somanyrobots@somanyrobots.com",
       "reddit": "https://www.reddit.com/user/somanyrobots"
+    },
+    {
+      "name": "Omega Ankh",
+      "discord": "omega_ankh"
     }
   ],
   "packs": [
@@ -25,6 +29,10 @@
       "label": "Spells That Don't Suck - Spells",
       "system": "dnd5e",
       "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dnd5e": {
           "types": [
@@ -37,6 +45,21 @@
       "name": "sds-journals",
       "label": "Spells That Don't Suck - Spell Lists",
       "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+    },
+    {
+      "name": "sds-summons",
+      "label": "Spells That Don't Suck - Summons",
+      "path": "packs/sds-summons",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "system": "dnd5e"
     }
   ],
@@ -48,7 +71,7 @@
 			"name": "Spells That Don't Suck",
 			"sorting": "a",
 			"color": "#bd8e28",
-			"packs": ["sds-spells", "sds-journals"]
+			"packs": ["sds-spells", "sds-journals", "sds-summons"]
 		}]
 	}],
   "url": "#{URL}#",
