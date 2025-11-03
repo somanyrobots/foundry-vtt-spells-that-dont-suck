@@ -49,7 +49,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
+      }
     },
     {
       "name": "sds-summons",
